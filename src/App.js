@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Pesquisa from './Pesquisa'
 
-function App() {
+export default function App() {
+
+  const bitcoin = require("./Icons/icons8-bitcoin.png").default;
+  const ethereum = require("./Icons/icons8-ethereum-50.png").default;
+  const lite = require("./Icons/litecoin.png").default;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">         
+      <Pesquisa moedaA="BTC" cor="gold" imgUrl= {bitcoin}/>      
+      <Pesquisa moedaA="ETH" cor="silver" imgUrl= {ethereum}/>
+      <Pesquisa moedaA="LTC" cor="DeepSkyBlue" imgUrl= {lite}/>
     </div>
   );
 }
 
-export default App;
+
